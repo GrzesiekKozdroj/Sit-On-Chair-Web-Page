@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,800,900');
+@import "partials/resets";
+@import "partials/colors";
+@import "partials/grid";
+body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
+
+/*--------------------------------------------------------------
+--------------------------Header--------------------------------
+---------------------------------------------------------------*/
+.header{
+    div{
+        width:20%;
+    }
+    .logo{
+        padding: 2.5vh 1.5% 1vh 30%;
+        font-family: 'raleway';
+        font-weight: 900;
+        letter-spacing: 0;
+        font-size: 0.85rem;
+    }
+    .logo_1{
+        font-weight: 600;
+    }
+    .logo_2{color: $mainLogoColor; font-weight: 900;}
+    /*/----------------------nav bar below-----------------*/
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: $whiteLetters;
+    height: 6vh;
+    nav{width:30%;}
+    ul{padding-right: 10%;}
+    li{
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 0.85rem;
+        font-family: 'raleway';
+        padding: 2.5vh 4% 1vh 4%;
+        letter-spacing: .12%;
+    }
+}
+/*--------------dropdown menu------------------------*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    width:120px;
+    margin: 30px 0 0 -35px;
+}  
+.tri{
+    &:before{
+        position:absolute;
+        margin-right:-300px;
+        content:"";
+        width:0;
+        height:0;
+        border-left:15px solid transparent;
+        border-right:15px solid transparent;
+        border-bottom: 15px solid black;
+    }
+}
+.navigation li:hover .dropdown-content {
+    display: block;
+        &:before{
+            position:absolute;
+            margin:-15px 0 0 50px;
+            content:"";
+            width:0;
+            height:0;
+            border-left:15px solid transparent;
+            border-right:15px solid transparent;
+            border-bottom: 15px solid black;
+        }
+    li{display:block;
+        width:120px;
+        font-size: 0.9rem;
+        text-transform:none;
+        font-weight: 400;
+        padding:8px 0 5px 15px;
+        line-height: 1.3rem;
+
+    }
+}
+/*------------------------------------------------------------------
+--------------------sekcja z fotelem i opisem-----------------------
+------------------------------------------------------------------*/
+.section_1{
+    background-image: linear-gradient($section_1_background_1,$section_1_background_1,$section_1_background_2);
+    height: 65vh; 
+    display:flex;
+}
+
+.sec1-picture{
+    overflow:hidden;
+    ul{
+        position:relative;
+        padding:0;
+        li{
+            float:left;
+            list-style: none;
+        }
+    }
+    img{
+        margin:5vh 0% 10vh -7%;
+        width: 70vh;
+        padding:2vh 0 9vh 0;
+    }
+}
+.sec1-button{
+    font-size: 5rem;
+    color: $mainLogoColor;
+    font-weight:0;
+    font-family: 'raleway';
+    &:first-of-type{padding: 28vh 1% 10vh 5.5%;}
+    &:last-of-type{padding: 28vh 10% 10vh 0%;}
+}
+.sec1-description{
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family:'raleway';
+    h2{
+        margin: 1vh 0% 0vh -5%;
+        font-size:2.3rem;
+        letter-spacing: 0.1rem;
+            spam:first-of-type, spam:nth-of-type(3){
+        color:black;;
+        font-weight:600;
+        }
+            spam:nth-of-type(2),spam:last-of-type{
+        color:$mainLogoColor;
+        font-weight:800;
+        }
+    }
+    p{
+        font-size:0.9rem;
+        margin: 5vh 0% 0vh -5%;
+        width: 60vh;
+        line-height: 1rem;
+        letter-spacing:0.15rem;
+        text-align: center;
+    }
+
+    .sec1-description-button{
+        height: 6vh;
+        width: 40vh;
+        background-color: $mainLogoColor;
+        color: $whiteLetters;
+        border-radius: 1.5vh;
+        margin: 5vh 0% 0vh -5%;
+        position:relative;
+        font-size: 1.3rem;
+        letter-spacing:0.15rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/*------------------------section-2--------------------------*/
+.section_2{
+    display: flex;
+    justify-content: center;
+    font-family: 'raleway';
+    font-size: 1.1rem;
+    font-weight: 400;
+    .sec2_div{
+        display:inline-block;
+        width: 25%;
+        height: 33vh;
+        margin: 3.5vh 4vh 10vh 4vh;
+        div{
+            position: relative;
+            margin: -10vh 0% 0vh 0%;
+            background-color: rgba(233, 220, 220, 0.4);
+            height: 8vh;
+            width: 100%
+        }
+        
+    }
+    h3{
+        display: inline-block;
+        margin: 1.8vh 0 1vh 7%;
+        border-bottom: 1vh solid $mainLogoColor;
+        width: 51%;
+    }
+}
+.sec2_last_box{padding:2vh;border:1px solid rgb(163, 161, 161);}
+.sec2_mini_box1{
+    font-size: 1rem;
+    padding: 2vh 0;
+    margin: 2vh 0;
+    text-align: left;
+}
+.sec2_mini_box2{
+    padding: 3vh 0;
+    font-size: 1rem;
+    text-align: justify;
+}
+/*---------------------------section 3-------------------------*/
+.sec3{
+    margin-top:-2%;
+    height: 94vh;
+    background-color: $section_3_background;
+    h2{
+        border-bottom: 1vh solid $mainLogoColor;
+        display: inline-block;
+        margin: 6vh 0 10vh 4%;
+        width: 30%;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+    }
+}
+.sec3_big_box{display:flex; justify-content:center;}
+.sec3_mini_box{
+    width: 27%;
+    height: 65vh;
+    margin: 1vh 1.9% 2vh 1.9%;
+    border: 2px solid $sec3_text;
+    background: $section_1_background_1;
+}
+.box_green{
+    border: 2px solid $mainLogoColor;
+}
+.sec3_circle{
+    position:relative;
+    border-radius:50%;
+    display:inline-block;
+    width:7vh;
+    height:7vh;
+    top:-4.5vh;
+    background-color: white;
+}
+.grey{
+    border:1px solid $sec3_text;
+    background-color: $section_1_background_1;
+    border-radius: 50%;
+}
+
+.grey div{
+    border-radius: 50%;
+    position: relative;
+    background-color: $sec3_text;
+    top:25%;
+    left:25%;
+    width: 50%;
+    height: 50%;
+}
+.green{
+    border:1px solid $mainLogoColor;
+    background-color: $mainLogoColor;
+}
+.green div{
+    border-radius: 50%;
+    position: relative;
+    background-color: $section_1_background_1;
+    top:25%;
+    left:25%;
+    width: 50%;
+    height: 50%;
+}
+/*------------------Sec 3 content-------------------------*/
+.sec3_mini_box{
+    font-size: 1.4rem;
+    text-align: center;
+    vertical-align: middle;
+    // display:flex;
+    // flex-flow:column;
+    // justify-content: center;
+    h4{
+        color: $mainLogoColor;
+        margin:-5% 0 20% 0;
+        font-size: 1.6rem;
+    }
+    h5{
+        border:2px solid $sec3_text;
+        border-radius:50%;
+        background-color: white;
+        width:8vw;
+        height:8vw;
+        display: inline-block;
+        margin:-12% 0 15% 0;
+        padding: 8% 0;
+        p:first-of-type{
+            font-size:2.3rem;
+            font-weight: 800;
+            color: $sec3_text;
+        }
+        p:last-of-type{
+            font-size:1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.1rem;
+            color: $sec3_text;
+        }
+        sup {font-size:xx-small; vertical-align:super;}
+    }
+}
+
+.sec_3_extras {
+    border-top:1px solid white;
+    p{
+        font-family: 'Raleway';
+        letter-spacing: 0.1rem;
+        line-height: 1.1rem;
+        padding-top:1.5vh;
+        color: #9d9d9d;
+        height: 5vh;
+        background-color: $section_3_background;
+        &:nth-child(2n){
+            background-color:$sec3_mini_background;
+        }
+    }
+}
+
+.sec_3_button_gray{
+    display:inline-block;
+    width: 40%;
+    height: 4.5vh;
+    padding-top:1.2vh;
+    font-family:'raleway';
+    font-size:1rem;
+    color: white;
+    background-color: $mainLogoColor;
+    border-radius:1vh;
+    text-transform: uppercase;    
+}
+.sec3_button_1{
+    position: relative;
+    bottom: -14vh;
+}
+.sec3_button_3{
+    position: relative;
+    bottom: -4vh;
+}
+.box_green{
+    background: $mainLogoColor;
+    h4{color: white;}
+    h5 {border: 1px solid $mainLogoColor;
+        p{color:$mainLogoColor!important;}}
+}
+.sec_3_button_green{
+    display:inline-block;
+    width: 40%;
+    height: 4.5vh;
+    padding-top:1.2vh;
+    font-family:'raleway';
+    font-size:1rem;
+    color: $mainLogoColor;
+    background-color: white;
+    border-radius:1vh;
+    text-transform: uppercase;    
+    position: relative;
+    bottom:-9vh;
+}
+/*---------------------------section 4-------------------------*/
+.sec4{
+    h3{
+        font-size:1.4rem;
+        display:inline-block;
+        width: 26%;
+        margin: 8vh 0 5vh 10vh;
+        border-bottom:1vh solid $mainLogoColor;
+    }
+    }
+
+
+form{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+}
+.sec4_form_section1{
+    display:flex;
+    flex-direction:column;
+    width: 85%;
+    margin: 0 5vh 0 5vh;
+    font-family: 'raleway';
+    input{
+        display: inline-block;
+        border: 0.2vh solid $mainLogoColor;
+        width: 100%;
+        height: 9vh;
+        margin: 1vh 5vh 2.5vh 5vh;
+        font-size: 2.1rem;
+        padding-left: 2%;
+        font-weight: 100;
+        &::placeholder{color: $sec3_text;}
+    }
+    textarea{
+        display: inline-block;
+        border: 0.2vh solid $mainLogoColor;
+        width: 100%;
+        height: 24vh;
+        margin: 0 5vh 0 5vh;
+        font-size: 2.1rem;
+        padding: 2% 0 0 2%;
+        font-weight: 100;
+        &::placeholder{color: $sec3_text;}
+    }
+}
+.sec4_form_section2{
+    img{
+        margin: -2vh 0 0 25%;
+    }
+    label{
+         margin-left: 15%;
+     }
+    .form_send{
+        display:inline-block;
+        width: 60%;
+        height:9vh;
+        margin: -2vh 0 0 20%;
+        border-radius: 1.2vh;
+        color: white;
+        background-color:$mainLogoColor;
+        font-family:'raleway';
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 3.5%;
+    }
+}
+/*---------------------CALCULATOR--------------------*/
+.application {
+    background-color: #f9f9f9;
+    padding:30px 0;
+    margin-bottom:10vh;
+    display:flex;
+    justify-content: center;
+  }
+  .application h3 {
+    color: #575757;
+    font-size: 18px;
+  }
+  
+  .application header.align_right{
+    text-align: right;
+  }
+  
+  
+  .inline {
+    display:inline-block;
+    width:300px;
+    padding:14px;
+    vertical-align: top;
+  }
+  
+  
+  .form {
+    margin-top:50px;
+  }
+  .drop_down_list {
+    border:1px solid #8de0d2;
+    width: 280px;
+    height:38px;
+    background-color: white;
+    margin-top:22px;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  .list_label {
+    font-size: 30px;
+    color: #e2e2e2;
+    font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
+  }
+  
+  
+  .checkbox {
+    position: relative;
+    padding: 30px 30px 30px 0;
+  }
+  .checkbox input {
+    display: block;
+    opacity: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    cursor: pointer;
+  }
+  
+  .checkbox label {
+    display: block;
+    padding-left: 65px;
+    position: relative;
+    font-size: 28px;
+    color: #cecece;
+    line-height: 120%;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox label::before, .checkbox label::after {
+    border: 1px solid #27c7ab;
+    content: "";
+    display: block;
+    left: 0;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    top: 0;
+  }
+  .checkbox label::after {
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+    border: 0;
+    display: none;
+  }
+  
+  .checkbox input:checked + label::after {
+    display: block;
+  }
+  
+  
+  .active {
+    background: url('../images/form_ok.jpg');
+    width: 48px;
+    height: 40px;
+  
+  }
+  .inline_text {
+    display: inline-block;
+    width: 228px;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-left: 15px;
+    color: #aeaeae;
+  }
+  .image_part img{
+    margin-top: 110px;
+    margin-left: 38px;
+  }
+  
+  
+  .application .green_bell {
+    background-color: #24baa0;
+    width: 200px;
+    height: 6px;
+    display: inline-block;
+    margin: 5px 0 5px 0;
+  }
+  
+  .summary_panel {
+    background-color: white;
+    width:100%;
+    height:195px;
+    padding:10px;
+    margin-top: 50px;
+  
+  }
+  
+  .application .green_button {
+    background-color: #27c7ab;
+    color: white;
+    text-align:center;
+    text-transform: uppercase;
+    width: 200px;
+    padding: 10px 30px;
+    font-size: 24px;
+    display: inline-block;
+    font-family: 'ralewaymedium', Arial, Tahoma, sans-serif;
+    margin-top: 20px;
+    margin-left: 29px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .panel_left {
+    display: inline-block;
+    width: 185px;
+    vertical-align: top;
+    padding-bottom:10px;
+    border-bottom:1px solid #e7e7e7;
+    height: 135px;
+  }
+  
+  .panel_right {
+    display: inline-block;
+    width: 100px;
+    border-left:1px solid #e7e7e7;
+    text-align: right;
+    vertical-align: top;
+    padding-bottom:10px;
+    border-bottom:1px solid #e7e7e7;
+    height: 135px;
+  }
+  
+  .panel_left h4 , .panel_right h4{
+    color: #24baa0;
+    font-size: 23px;
+  }
+  
+  .panel_left span{
+    margin-top:10px;
+    font-size: 22px;
+    color: #5b5a5a;
+    display: block;
+  }
+  
+  .panel_right span {
+    display: block;
+    font-size: 22px;
+    color: #24baa0;
+    margin-top:10px;
+  }
+  .sum_label{
+    display: inline-block;
+    width: 185px;
+    margin-top: 10px;
+    font-size: 22px;
+    color: #5b5a5a;
+  }
+  
+  .sum {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 22px;
+    color: #24baa0;
+  }
+  
+  .list_arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #24baa0;
+    display:block;
+    position: absolute;
+    right: 14px;
+    top: 20px;
+    cursor: pointer;
+  }
+  
+  .list_panel {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 288px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    list-style: none;
+    margin: 0;
+    left: 0px;
+    z-index: 2;
+    position: absolute;
+    top: 54px;
+    display:none;
+  }
+  .list_panel li {
+    margin-top:10px;
+    cursor: pointer;
+    color: #585858;
+  }
+  
+  .title {
+    height: 30px;
+  }
+/*------------------FOOTER------------------------*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    .footer_copyright{
+        font-family:'raleway';
+        font-size: 1rem;
+        color: $sec3_text;
+        text-align: center;
+        display:inline-block;
+        width:40%;
+        margin:2vh 0 0 10vh;
+        letter-spacing: 0.1rem;
+    }
+    div{
+        margin: 2vh 0 0 0;
+        width:40%;
+        display:flex;
+        justify-content: flex-end;
+        img{
+            margin-top:-2vh;
+            margin-right: 1.5%;
+        }
+        p{
+            font-size:1.2rem;
+            color: $sec3_text;
+            font-weight: 600;
+            span{font-weight:900;}
+            margin-right:17%;
+            margin-left:10%;
+            letter-spacing: 0.1rem;
+        }
+    }
+}
+/*------------------------------JS classes--------------*/
+.hidden{
+    display:none;
+}
+

@@ -942,3 +942,9 @@ form {
 .hidden {
   display: none;
 }
+
+@media only screen and (min-width: 1200px) {
+  .sec1-picture ul li {
+    width: 1590px;
+  }
+}

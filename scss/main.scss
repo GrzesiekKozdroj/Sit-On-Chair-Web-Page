@@ -2,12 +2,22 @@
 @import "partials/resets";
 @import "partials/colors";
 @import "partials/grid";
-body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
+body{padding:0;margin:0;font-family: 'Raleway', sans-serif;display: flex;flex-flow:column;}
 
 /*--------------------------------------------------------------
 --------------------------Header--------------------------------
 ---------------------------------------------------------------*/
-.header{
+#header{
+    /*/----------------------nav bar below-----------------*/
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    background-color: black;
+    color: $whiteLetters;
+    height: 6vh;
+    position:fixed; z-index:2;
+    left:50%;
+    margin-left:-600px;
     div{
         width:20%;
     }
@@ -22,12 +32,6 @@ body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
         font-weight: 600;
     }
     .logo_2{color: $mainLogoColor; font-weight: 900;}
-    /*/----------------------nav bar below-----------------*/
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: $whiteLetters;
-    height: 6vh;
     nav{width:30%;}
     ul{padding-right: 10%;}
     li{
@@ -48,6 +52,9 @@ body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
     z-index: 1;
     width:120px;
     margin: 30px 0 0 -35px;
+    li{
+        margin-left:8px;
+    }
 }  
 .tri{
     &:before{
@@ -80,8 +87,14 @@ body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
         font-weight: 400;
         padding:8px 0 5px 15px;
         line-height: 1.3rem;
-
+        color:white;
+        text-decoration: none;
     }
+}
+#header-img{
+    width:0;
+    height:0;
+    display:inline-block;
 }
 /*------------------------------------------------------------------
 --------------------sekcja z fotelem i opisem-----------------------
@@ -108,6 +121,12 @@ body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
         padding:99px 51px 89px 0;
     }
 }
+#video{
+    margin: 5vh 0% 10vh -7%;
+    width: 572px;
+    height: 497px;
+    padding: 95px 37px 90px 112px;
+}
 .sec1-button{
     font-size: 5rem;
     color: $mainLogoColor;
@@ -124,7 +143,7 @@ body{padding:0;margin:0;font-family: 'Raleway', sans-serif;}
     align-items: center;
     color: black;
     font-family:'raleway';
-    h2{
+    h1{
         margin: 1vh 0% 0vh -5%;
         font-size:2.3rem;
         letter-spacing: 0.1rem;

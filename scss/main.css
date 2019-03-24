@@ -152,25 +152,32 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-flow: column;
 }
 
 /*--------------------------------------------------------------
 --------------------------Header--------------------------------
 ---------------------------------------------------------------*/
-.header {
+#header {
   /*/----------------------nav bar below-----------------*/
   display: flex;
   justify-content: space-between;
+  justify-self: center;
   background-color: black;
   color: white;
   height: 6vh;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  margin-left: -600px;
 }
 
-.header div {
+#header div {
   width: 20%;
 }
 
-.header .logo {
+#header .logo {
   padding: 2.5vh 1.5% 1vh 30%;
   font-family: 'raleway';
   font-weight: 900;
@@ -178,24 +185,24 @@ body {
   font-size: 0.85rem;
 }
 
-.header .logo_1 {
+#header .logo_1 {
   font-weight: 600;
 }
 
-.header .logo_2 {
+#header .logo_2 {
   color: #21c4a7;
   font-weight: 900;
 }
 
-.header nav {
+#header nav {
   width: 30%;
 }
 
-.header ul {
+#header ul {
   padding-right: 10%;
 }
 
-.header li {
+#header li {
   display: inline-block;
   text-transform: uppercase;
   font-weight: 800;
@@ -213,6 +220,10 @@ body {
   z-index: 1;
   width: 120px;
   margin: 30px 0 0 -35px;
+}
+
+.dropdown-content li {
+  margin-left: 8px;
 }
 
 .tri:before {
@@ -249,6 +260,14 @@ body {
   font-weight: 400;
   padding: 8px 0 5px 15px;
   line-height: 1.3rem;
+  color: white;
+  text-decoration: none;
+}
+
+#header-img {
+  width: 0;
+  height: 0;
+  display: inline-block;
 }
 
 /*------------------------------------------------------------------
@@ -280,6 +299,13 @@ body {
   padding: 99px 51px 89px 0;
 }
 
+#video {
+  margin: 5vh 0% 10vh -7%;
+  width: 572px;
+  height: 497px;
+  padding: 95px 37px 90px 112px;
+}
+
 .sec1-button {
   font-size: 5rem;
   color: #21c4a7;
@@ -305,18 +331,18 @@ body {
   font-family: 'raleway';
 }
 
-.sec1-description h2 {
+.sec1-description h1 {
   margin: 1vh 0% 0vh -5%;
   font-size: 2.3rem;
   letter-spacing: 0.1rem;
 }
 
-.sec1-description h2 spam:first-of-type, .sec1-description h2 spam:nth-of-type(3) {
+.sec1-description h1 spam:first-of-type, .sec1-description h1 spam:nth-of-type(3) {
   color: black;
   font-weight: 600;
 }
 
-.sec1-description h2 spam:nth-of-type(2), .sec1-description h2 spam:last-of-type {
+.sec1-description h1 spam:nth-of-type(2), .sec1-description h1 spam:last-of-type {
   color: #21c4a7;
   font-weight: 800;
 }

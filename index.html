@@ -11,23 +11,24 @@
 
 <body>
     <!-- ---------------------HEADER----------------------------- -->
-    <header class="container header">
+    <header class="container" id="header">
         <div>
             <p class="logo">
                 <spam class="logo_1">SIT</spam>
                 <spam class="logo_2"> ON </spam>
                 <spam class="logo_1">CHAIR</spam>
             </p>
+            <img src="./images/orange_chair.png" id="header-img">
         </div>
 
         <nav>
-            <ul class="navigation">
+            <ul class="navigation" id="nav-bar">
                 <li>o firmie
                     <ul class="dropdown-content">
                         
-                        <li>Aktualnosci</li>
-                        <li>Nasz team</li>
-                        <li>Historia</li>
+                        <a class="nav-link" href="#welcome-section"><li>Aktualnosci</li></a>
+                        <a class="nav-link" href="#calculator"><li>Nasz team</li></a>
+                        <a class="nav-link" href="#shoppin"><li>Historia</li></a>
                     </ul>
                 </li>
                 <li>galeria</li>
@@ -36,7 +37,7 @@
         </nav>
     </header>
     <!-- ---------------------SECTION1--------------------------- -->
-    <section class="container section_1">
+    <section class="container section_1" id="welcome-section">
         <div class="sec1-button leftSlide"> &lt;</div>
 
         <div class="sec1-picture">
@@ -45,18 +46,20 @@
                     <img src="./images/orange_chair.png" alt="black chair">
                 </li>
                 <li>
+                    <iframe id="video" src="https://www.youtube.com/embed/P2lG3CkULyw" frameborder="0" allow="encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+                </li>
+                <li>
                     <img src="./images/black_chair.png" alt="black chair">
                 </li>
             </ul>
         </div>
-
         <div class="sec1-description">
-            <h2>
+            <h1>
                 <spam>SIT</spam>
                 <spam> ON </spam>
                 <spam>OUR</spam>
                 <spam> CHAIR</spam>
-            </h2>
+            </h1>
             <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper
                 Suspendisse a pellentesque dui, non felis. Maecenas
                 malesuada elit lectus felis, malesuada ultricies. Curabitur et
@@ -101,7 +104,7 @@
     </section>
     
 <!-- ----------------------Calculator--------------------- -->
-    <section class="container application ">
+    <section class="container application " id="calculator">
             <div class="main_width">
                 <section class="choice_part inline">
                     <header>
@@ -176,7 +179,7 @@
             </div>
         </section>
 <!-- ---------------------Section 3--------------------------------->
-    <section class="container sec3">
+    <section class="container sec3" id="shoppin">
         <h2>CENNIK</h2>
         <div class="sec3_big_box">
             <div class="sec3_mini_box">
@@ -246,10 +249,10 @@
     <section class="container sec4">
         <h3>KONTAKT</h3>
         <div>
-            <form>
+            <form id="form">
                 <div class="sec4_form_section1">
                     <input type="text" placeholder="imie">
-                    <input type="email" placeholder="email">
+                    <input type="email" placeholder="email" id="email" >
                     <textarea placeholder="Wiadomosc"></textarea>
                 </div>
                 <div class="sec4_form_section2">
@@ -260,7 +263,7 @@
                             Zgadzam sie na przetwarzanie danych osobowych
                         </label>
                     </div>
-                    <div class="form_send">WYSLIJ</div>
+                    <div class="form_send" id="submit" action="https://www.freecodecamp.com/email-submit">WYSLIJ</div>
                 </div>
             </form>
         </div>
